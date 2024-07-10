@@ -1,0 +1,11 @@
+---
+services:
+  nro-docker-image:
+    build: ./
+    ports:
+      - 8888:8888
+    environment: 
+      - JUPYTER_TOKEN=myToken
+    volumes:
+      - ./:/home/jovyan/work/
+...
